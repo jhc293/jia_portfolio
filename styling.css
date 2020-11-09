@@ -1,0 +1,698 @@
+html, body, header, footer, hgroup, nav, article, section, figure,
+figcaption, h1, h2, h3, ul, li, body, div, p, img {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    
+}
+
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+  
+  *:focus{
+    border: 2px solid black;
+  }
+
+/**
+    This is the entire set up for the body, nav, header, and footer
+**/
+
+body{
+    font-family: "Quicksand";
+    background-image: url(Images/CUT.png);
+    background-color: whitesmoke;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: 50%;
+    margin: 0;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1em;
+    border-bottom: 5px solid #e43c25;
+}
+
+header h1{
+    font-size: 4em;
+    color: black;
+    text-align: left;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+footer{
+    border-top: 5px solid red;
+    background-color: black;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+li a:hover:not(.active) {
+    background-color: #b33d3d;
+  }
+  
+ul li.current{
+    background-color: #fd5853;
+  }
+li.current a{
+    text-decoration: underline;
+}
+
+/**
+    HomePage
+**/
+
+.bio{
+    display: flex;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 15em;
+    padding-right: 15em;
+    font-family: "Oswald";
+    background: rgb(36,0,0);
+    background: linear-gradient(90deg, rgba(36,0,0,1) 53%, rgba(172,0,0,1) 100%);
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.biotextbox{
+    padding: 1em;
+    color: white;
+    text-align: left;
+    align-items: center;
+}
+
+.biotextbox h1{
+    padding-bottom: .5em;
+    font-size: 4em;
+    border-bottom: 1px solid white;
+}
+
+.biotextbox p{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.jiapic img{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+/**
+    This is set up for everything in the container, gallary, and other things
+**/
+
+.biocontainer, .gamecontainer, .animecontainer{
+    padding: 2em;
+}
+
+.biogallery{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(12, 5vw);
+    grid-gap: 1.5rem;
+    
+}
+
+.galleryimg{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.biogallery p{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+}
+
+.pic1:hover, .pic2:hover, .pic3:hover, .pic4:hover, .pic5:hover, .pic6:hover{
+    opacity: .1;
+}
+
+.overlay1, .overlay2, .overlay3, .overlay4, .overlay5, .overlay6{
+    background-color:rebeccapurple;
+    text-align: center;
+    font-size: 1em;
+    font-style: italic;
+    padding-top: 9em;
+}
+
+.gallerytext img, .gallerytext2 img, .gallerytext3 img, .foodbio img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.gallerytext h1, .gallerytext2 h1, .gallerytext3 h1{
+    color: white;
+    font-size: 4em;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+}
+
+/**
+    This is where the pictures, textbox placement on the grid goes.
+**/
+
+.gallerytext{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    background-color: brown;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 4;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.pic1, .overlay1{
+    transition: .5s ease;
+    grid-column: 5 / span 2;
+    grid-row: 1 / span 4;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.pic2, .overlay2{
+    transition: .5s ease;
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 4;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.gallerytext2{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    background-color: brown;
+    grid-column: 5 / span 4;
+    grid-row: 5 / span 4;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.pic3, .overlay3{
+    transition: .5s ease;
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 4;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.pic4, .overlay4{
+    transition: .5s ease;
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 4;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.gallerytext3{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    background-color: brown;
+    grid-column: 1 / span 4;
+    grid-row: 9 / span 4;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.pic5, .overlay5{
+    transition: .5s ease;
+    grid-column: 5 / span 2;
+    grid-row: 9 / span 4;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.pic6, .overlay6{
+    transition: .5s ease;
+    grid-column: 7 / span 2;
+    grid-row: 9 / span 4;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+/**
+    Food Page
+**/
+
+.foodbio{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    padding: 8em;
+    background-color: brown;
+}
+
+.foodbio p{
+    color: white;
+    font-size: 2em;
+    align-content: center;
+    z-index: 2;
+    text-align: center;
+    font-family: "Oswald";
+}
+
+.foodcontainer{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.foodtitle{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 2em;
+    padding: 0.5em;
+    text-decoration: underline;
+}
+
+.foodcontainer h2{
+    font-size: 2em;
+}
+
+.foodcontainer a:visited{
+    color: purple;
+}
+
+.foodcontainer a:link{
+    color: darkred;
+}
+
+.foodcontainer p{
+    padding: 5px;
+}
+
+.review{
+    margin: 10px;
+    height: 425px;
+    width: 425px;
+    padding: 1em;
+    background: rgba(122, 104, 104, 0.404);
+    text-align: center;
+}
+
+.review img{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
+}
+
+/**
+    Video Game Page
+**/
+
+#gametext p{
+    color: white;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    padding: 5em;
+    font-size: 1.2em;
+}
+#gametext2 p, #gametext3 p{
+    color: white;
+    align-content: center;
+    position: relative;
+    padding: 5em;
+    font-size: 1em;
+}
+
+#f2{
+    animation-delay: -3s; 
+}
+
+.gameimg{
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    min-width: 100%;
+    min-height: 100%
+    
+}
+
+.textcontainer {
+    font-style: italic;
+    text-align: center;
+    background-color: white;
+    height: 25px;
+  }
+  
+
+@keyframes fade {
+    0% {opacity: .0;}
+    20% {opacity: .3;}
+    33% {opacity: .1;}
+    53% {opacity: 0;}
+}
+
+/**
+    Game Gallery
+**/
+
+.gamegallery{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(18, 5vw);
+    grid-gap: 1.5rem;
+}
+
+.picturecaption {
+    grid-column: 5 / span 4;
+    grid-row: 5 / span 4;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+.filler{
+    grid-column: 5 / span 4;
+    grid-row: 1 / span 4;
+}
+
+.picturecaption2 {
+    grid-column: 1 / span 4;
+    grid-row: 5 / span 4;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+.gamevideo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    grid-column: 1 / span 4;
+    grid-row: 9 / span 4;
+}
+
+.gametext {
+    grid-column: 5 / span 4;
+    grid-row: 9 / span 4;
+    background-color: brown;
+  }
+
+.gamevideo2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    grid-column: 5 / span 4;
+    grid-row: 13 / span 4;
+}
+
+.gametext2{
+    grid-column: 1 / span 4;
+    grid-row: 13 / span 4;
+    background-color: brown;
+  }
+
+
+/**
+  Anime Page
+**/
+
+.animegallery{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(40, 5vw);
+    grid-gap: 1.5rem;
+}
+
+.animecontainer h1{
+    font-size: 2em;
+    padding: 10px;
+    color: white;
+}
+
+.animecontainer p{
+    padding: 15px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.animepic1{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 4;
+}
+
+.animereview1{
+    grid-column: 3 / span 4;
+    grid-row: 1 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+.animepic2{
+    grid-column: 7 / span 2;
+    grid-row: 5 / span 4;
+}
+
+.animereview2{
+    grid-column: 3 / span 4;
+    grid-row: 5 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+.animepic3{
+    grid-column: 1 / span 2;
+    grid-row: 9 / span 4;
+}
+
+.animereview3{
+    grid-column: 3 / span 4;
+    grid-row: 9 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+.animepic4{
+    grid-column: 7 / span 2;
+    grid-row: 13 / span 4;
+}
+
+.animereview4{
+    grid-column: 3 / span 4;
+    grid-row: 13 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+.animepic5{
+    grid-column: 1 / span 2;
+    grid-row: 17 / span 4;
+}
+
+.animereview5{
+    grid-column: 3 / span 4;
+    grid-row: 17 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+.animepic6{
+    grid-column: 7 / span 2;
+    grid-row: 21 / span 4;
+}
+
+.animereview6{
+    grid-column: 3 / span 4;
+    grid-row: 21 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+.animepic7{
+    grid-column: 1 / span 2;
+    grid-row: 25 / span 4;
+}
+
+.animereview7{
+    grid-column: 3 / span 4;
+    grid-row: 25 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+.animepic8{
+    grid-column: 7 / span 2;
+    grid-row: 29 / span 4;
+}
+
+.animereview8{
+    grid-column: 3 / span 4;
+    grid-row: 29 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+.animepic9{
+    grid-column: 1 / span 2;
+    grid-row: 33 / span 4;
+}
+
+.animereview9{
+    grid-column: 3 / span 4;
+    grid-row: 33 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+.animepic10{
+    grid-column: 7 / span 2;
+    grid-row: 37 / span 4;
+}
+
+.animereview10{
+    grid-column: 3 / span 4;
+    grid-row: 37 / span 4;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
+}
+
+
+@media screen and (max-width: 850px){
+    
+    header{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: unset;
+    }
+
+    .bio{
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links{
+        padding-top: 10px;
+    }
+    
+    /**
+        Bio Stuff
+    **/
+    .biocontainer, .overlay1, .overlay2, 
+    .overlay3, .overlay4, .overlay5, .overlay6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:unset;
+    }
+
+    .biocontainer img, .foodbio img, .animecontainer img{
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
+    }
+
+    .biocontainer p{
+        display: flex;
+        font-size: 100%;
+    }
+
+    .biocontainer h1{
+        font-size: 1.5em;
+    }
+
+    /**
+        Food Stuff
+    **/
+
+    .foodbio{
+        padding: 2em;
+    }
+    .foodbio p{
+        font-size: unset;
+    }
+
+    .review{
+        flex-direction: column;
+    }
+
+    /**
+        Anime Stuff
+    **/
+    .animecontainer{
+        display: flex;
+    }
+
+    .animecontainer h1{
+        font: unset;
+        padding-bottom: unset;
+    }
+
+    .animecontainer p{
+        display: flex;
+        overflow: hidden;
+        font-size: 6.5px;
+    }
+    
+}
