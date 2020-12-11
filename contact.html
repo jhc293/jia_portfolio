@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styling.css" type="text/css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <title>contact</title>
+</head>
+
+<body>
+    <a class = "skip" href="#skip">Skip to Main Content</a>     
+    <header>
+        <h1>J.C.</h1>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li class="current" ><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="contact_container">
+        <form id="contact-form" method="POST" action="contact.php">
+            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+            <br>
+            <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+            <br>
+            <textarea name="message" class="form-control" placeholder="Message" required></textarea>
+            <br>
+            <input type="submit" class="form-control-submit" value="Send Message">
+        </form>
+    </div>
+
+
+    <footer>
+        <p>Where are the subtitles</p>
+    </footer>
+    
+</body>
+    
+    
+</html>
