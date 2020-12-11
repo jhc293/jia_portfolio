@@ -5,7 +5,7 @@
     $msg = $_POST['message'];
 
 
-    $email_from = 'justin.tu049@hotmail.com';
+    $email_from = 'pspjia@gmail.com';
 
     $email_subject = 'New Contact From Portfolio';
 
@@ -13,7 +13,7 @@
                     "Email: $msg_email.\n".
                         "Message: $msg.\n";
     
-    $to = 'tujustin.msu.edu';
+    $to = 'jiacedu@gmail.com';
 
     $headers = "From: $email_from \r\n";
 
